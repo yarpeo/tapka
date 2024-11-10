@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>реальная тапка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: white;
+        }
+        #slipper {
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        #slipper:hover {
+            transform: scale(1.1);
+        }
+        #counter {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>реаль</h1>
+<img id="slipper" src="slipper.png" alt="Slipper Image" />
+<div id="counter">Тапов тапки: 0</div>
+
+<script>
+    let pressCount = 0;
+    const slipper = document.getElementById("slipper");
+    const counter = document.getElementById("counter");
+
+    slipper.addEventListener("click", function() {
+        pressCount++;
+        counter.textContent = `Тапов тапки: ${pressCount}`;
+    });
+</script>
+</body>
+</html>
